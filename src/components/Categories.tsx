@@ -28,23 +28,20 @@ const categories=[
 },
 ]
 
-
 const Categories = () => {
-  return (
-    <div className=" pt-8 flex flex-col justify-start">
-      <h1 className="pl-32 text-xl font-bold dark:text-white">Trending Categories</h1>
-
-      
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 pt-16 mx-36 ">
-            {categories.map(item=>(
-                <ItemCard data={item} />
-            ))}
-      
-       
+    return (
+      <div className="pt-8 flex flex-col justify-start">
+        <h1 className="pl-4 md:pl-32 text-xl font-bold dark:text-white">
+          Trending Categories
+        </h1>
+  
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-16 px-4 md:mx-36">
+          {categories.map((item) => (
+            <ItemCard data={item} key={item.id} />
+          ))}
+        </div>
       </div>
-      
-    </div>
-  );
-};
-
-export default Categories;
+    );
+  };
+  
+  export default Categories;
